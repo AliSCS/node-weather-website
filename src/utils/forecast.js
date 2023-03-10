@@ -9,7 +9,8 @@ const forecast = (long, lat, callback) => {
             callback('please try a different criteria', undefined)
         } else {
             callback(undefined,
-                body.current.weather_descriptions[0]+ ', It is currently ' + body.current.temperature +' out. It feels like ' + body.current.feelslike +' out.'
+                body.current.weather_descriptions[0]+ ', It is currently ' + body.current.temperature +' out. It feels like ' + body.current.feelslike +
+                ' out. Humidity ' + body.current.humidity + ', and visibiltiy ' + body.current.visibility + '.'
                 
             )
         }
